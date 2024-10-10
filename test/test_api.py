@@ -1,6 +1,5 @@
 from Data.DataAPI import *
 from Data.DataUI import *
-import requests
 import allure
 from Pages.CartPage import CartPageAPI
 from Pages.MainPage import MainPageAPI
