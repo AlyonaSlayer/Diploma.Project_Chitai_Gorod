@@ -61,3 +61,33 @@ class MainPageUI():
         result = self.driver.find_element(By.CSS_SELECTOR, button_click_place_an_order_locator).text
         return result
     
+    def get_promotion_page(self):
+        self.driver.find_element(By.CSS_SELECTOR, main_promotion_page_locator).click()
+        WebDriverWait(self.driver, 2).until(EC.presence_of_element_located((By.CSS_SELECTOR, main_promotion_title_locator)))
+        return self.driver.find_element(By.CSS_SELECTOR, main_promotion_title_locator).text
+    
+    def get_sail_page(self):
+        self.driver.find_element(By.CSS_SELECTOR, main_sales_page_locator).click()
+        WebDriverWait(self.driver, 2).until(EC.presence_of_element_located((By.CSS_SELECTOR, main_sales_title_locator)))
+        return self.driver.find_element(By.CSS_SELECTOR, main_sales_title_locator).text
+    
+    def get_school_page(self):
+        self.driver.find_element(By.CSS_SELECTOR, main_school_page_locator).click()
+        return self.driver.find_element(By.CSS_SELECTOR, main_school_title_locator).text
+    
+    def get_comics_page(self):
+        self.driver.find_element(By.CSS_SELECTOR, main_comics_page_locator).click()
+        return self.driver.find_element(By.CSS_SELECTOR, main_comics_title_locator).text
+    
+    def get_collection_page(self):
+        self.driver.find_element(By.CSS_SELECTOR, main_collection_page_locator).click()
+        return self.driver.find_element(By.CSS_SELECTOR, main_collection_title_locator).text
+    
+    def get_articles_page(self):
+        self.driver.find_element(By.CSS_SELECTOR, main_articles_page_locator).click()
+        return self.driver.find_element(By.CSS_SELECTOR, main_articles_title_locator).text
+    
+    def get_certificate_page(self):
+        self.driver.find_element(By.CSS_SELECTOR, main_articles_page_locator).click()
+        return self.driver.find_element(By.CSS_SELECTOR, main_articles_title_locator).text
+    

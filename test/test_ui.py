@@ -84,3 +84,36 @@ class Test_UI():
         assert len(list_before) == 2
         assert resp == 'ВОССТАНОВИТЬ КОРЗИНУ'
 
+    def test_promoution_page(self):
+            self.MPUI.get_chitai_gorod()
+            resp = self.MPUI.get_promotion_page()
+            assert resp == "АКЦИИ"
+
+    def test_sail_page(self):
+         self.MPUI.get_chitai_gorod()
+         resp = self.MPUI.get_sail_page()
+         assert resp == "РАСПРОДАЖА"
+
+    def test_school_page(self):
+        self.MPUI.get_chitai_gorod()
+        resp = self.MPUI.get_school_page()
+        assert resp == 'УЧЕБНЫЕ ПОСОБИЯ'
+
+    def test_comics_page(self):
+        self.MPUI.get_chitai_gorod()
+        resp = self.MPUI.get_comics_page()
+        assert resp == "НОВИНКИ" 
+
+    def test_collection_page(self):
+        self.MPUI.get_chitai_gorod()
+        resp = self.MPUI.get_collection_page()
+        assert resp == "ЧТО ЕЩЁ ПОЧИТАТЬ?"
+
+    def test_articles_page(self):
+        self.MPUI.get_chitai_gorod()
+        resp = self.MPUI.get_articles_page()
+        assert resp == "АКТУАЛЬНОЕ"
+
+    
+
+    
